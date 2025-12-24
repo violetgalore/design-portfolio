@@ -36,19 +36,6 @@
             transform: scale(1.02);
         }
 
-        .counter {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            background: rgba(0,0,0,0.7);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 500;
-            pointer-events: none;
-        }
-
         .hint {
             position: absolute;
             top: 50%;
@@ -73,9 +60,6 @@
 <body>
     <div class="slider-container" onclick="nextImage()">
         <img id="slideImage" src="" alt="Dribbble work" loading="lazy">
-        <div class="counter">
-            <span id="current">1</span> / <span id="total">0</span>
-        </div>
         <div class="hint" id="hint">Click to see next</div>
     </div>
 
@@ -174,7 +158,6 @@
         function nextImage() {
             currentIndex = (currentIndex + 1) % images.length;
             document.getElementById('slideImage').src = images[currentIndex];
-            document.getElementById('current').textContent = currentIndex + 1;
         }
 
         // Show hint on first load
