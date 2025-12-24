@@ -1,10 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f5f5f5;
+        }
+        
+        .slider-container {
+            cursor: pointer;
+            max-width: 800px;
+            width: 100%;
+        }
+        
+        .slider-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+        
+        .slider-container:hover img {
+            transform: scale(1.02);
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <p>Testing GitHub Pages</p>
+    <div class="slider-container" onclick="nextImage()">
+        <img id="slideImage" src="ТВОЯ_ПЕРВАЯ_КАРТИНКА_URL" alt="Dribbble work">
+    </div>
+
+    <script>
+        const images = [
+            'URL_КАРТИНКИ_1',
+            'URL_КАРТИНКИ_2',
+            'URL_КАРТИНКИ_3',
+            // добавь все свои картинки
+        ];
+        
+        let currentIndex = 0;
+        
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            document.getElementById('slideImage').src = images[currentIndex];
+        }
+    </script>
 </body>
 </html>
