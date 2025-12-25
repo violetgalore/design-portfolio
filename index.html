@@ -52,11 +52,13 @@
 
     <script>
         const images = [
+            // Default first image
+            'dribbble5.webp',
+            // Rest of images (excluded: dribbble19, dribbble24, dribbble77, dribbble78)
             'dribbble1.webp',
             'dribbble2.webp',
             'dribbble3.webp',
             'dribbble4.webp',
-            'dribbble5.webp',
             'dribbble6.webp',
             'dribbble7.webp',
             'dribbble8.webp',
@@ -70,12 +72,12 @@
             'dribbble16.webp',
             'dribbble17.webp',
             'dribbble18.webp',
-            'dribbble19.webp',
+            // dribbble19.webp - excluded
             'dribbble20.webp',
             'dribbble21.webp',
             'dribbble22.webp',
             'dribbble23.webp',
-            'dribbble24.webp',
+            // dribbble24.webp - excluded
             'dribbble25.webp',
             'dribbble26.webp',
             'dribbble27.webp',
@@ -128,8 +130,8 @@
             'dribbble74.webp',
             'dribbble75.webp',
             'dribbble76.webp',
-            'dribbble77.png',
-            'dribbble78.png',
+            // dribbble77.png - excluded
+            // dribbble78.png - excluded
             'dribbble79.png',
             'dribbble80.png',
             'dribbble81.png',
@@ -138,7 +140,7 @@
         
         let currentIndex = 0;
         
-        // Initialize
+        // Initialize with dribbble5 as default
         document.getElementById('slideImage').src = images[0];
         
         function nextImage() {
